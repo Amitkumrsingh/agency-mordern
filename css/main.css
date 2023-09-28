@@ -1529,6 +1529,157 @@ a:hover, a:focus {
   -webkit-box-pack: justify;
 }
 
+@media (min-width: 992px) {
+  .round-button:hover, .round-button:focus {
+    outline: none;
+    -webkit-animation-name: scale;
+            animation-name: scale;
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .round-button:hover .round-button__circle svg, .round-button:focus .round-button__circle svg {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+.round-button__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 180px;
+  height: 180px;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .round-button__circle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.round-button__circle svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 14s;
+          animation-duration: 14s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.round-button__c {
+  display: block;
+  width: 40px;
+}
+
+@media (min-width: 992px) {
+  .round-button__c {
+    width: 67px;
+  }
+}
+
+.round-button__c svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: #000000;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes scale {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.circle-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          align-items: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
+      -ms-flex-pack: center;
+      -ms-flex-align: center;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+@media (min-width: 992px) {
+  .circle-link {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.circle-link:focus {
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .circle-link:hover, .circle-link:focus {
+    background-color: #fffe55;
+    border-color: #fffe55;
+  }
+}
+
+.circle-link svg {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+@media (min-width: 992px) {
+  .circle-link svg {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .modern-hero__btn {
   margin-bottom: 40px;
 }
